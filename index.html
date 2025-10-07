@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LankyGuyy1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: "Orbitron", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: url('background.gif') no-repeat center center / cover;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(10, 5, 0, 0.6);
+      z-index: 0;
+    }
+    h1 {
+      font-size: 4rem;
+      color: #f8e08e;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+      z-index: 1;
+      margin-bottom: 40px;
+      letter-spacing: 3px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from {text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);}
+      to {text-shadow: 0 0 25px rgba(255, 215, 0, 1);}
+    }
+
+    .socials {
+      display: flex;
+      gap: 30px;
+      z-index: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(20, 10, 25, 0.6);
+      border: 2px solid #a855f7; /* neon purple outline */
+      box-shadow: 0 0 12px #a855f7, 0 0 35px rgba(168, 85, 247, 0.6);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .socials a:hover {
+      transform: scale(1.15);
+      background: #f8e08e;
+      border-color: #f8e08e;
+      box-shadow: 0 0 25px #f8e08e, 0 0 50px rgba(255, 215, 0, 0.6);
+    }
+
+    .socials svg {
+      width: 36px;
+      height: 36px;
+      fill: #f8e08e; /* neon yellow inside */
+      filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover svg {
+      fill: #1a1410;
+      filter: none;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: #c5aa55;
+      font-size: 0.9rem;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      h1 {font-size: 2.5rem;}
+      .socials {gap: 20px;}
+      .socials a {width: 65px; height: 65px;}
+      .socials svg {width: 28px; height: 28px;}
+    }
+  </style>
+</head>
+<body>
+  <h1>LankyGuyy1</h1>
+  <div class="socials">
+    <a href="https://www.twitch.tv/lankyguyy1" target="_blank" aria-label="Twitch">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2L3 6v16h5v2h3l3-2h4l5-5V2H4zm16 12l-2 2h-5l-3 2v-2H7V4h13v10zM9 7h2v5H9V7zm5 0h2v5h-2V7z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/lanky_guyy1/" target="_blank" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm5 3.5A4.5 4.5 0 0012 16a4.5 4.5 0 000-9zm0 2a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm4.75-.9a1 1 0 100 2 1 1 0 000-2z"/></svg>
+    </a>
+    <a href="https://discord.gg/y4nBVYSpGP" target="_blank" aria-label="Discord">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.6 5.6A19.7 19.7 0 0015.8 4l-.2.4c1.5.4 2.9 1 4 1.8-1.8-.8-3.8-1.2-5.8-1.3l-.3.1a18.9 18.9 0 00-5.8 1.2c-1-.8-2.2-1.4-3.5-1.7l-.2-.4C4.4 5.1 2.7 6 1 7.3a19.3 19.3 0 006 12.5c1.3 1 2.8 1.9 4.5 2.4a13.2 13.2 0 01-2.2-2.8 8.8 8.8 0 006.4 0 13 13 0 01-2.2 2.8c1.7-.5 3.2-1.3 4.5-2.4a19.3 19.3 0 006-12.5 18.6 18.6 0 00-2.4-1.7zM9.5 14c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8c1 0 1.7.8 1.7 1.8S10.5 14 9.5 14zm5 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8c1 0 1.7.8 1.7 1.8S15.5 14 14.5 14z"/></svg>
+    </a>
+    <a href="https://x.com/lankyyguyy" target="_blank" aria-label="X (Twitter)">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.16 4.16 0 001.82-2.3 8.23 8.23 0 01-2.62 1 4.11 4.11 0 00-7 3.75A11.65 11.65 0 013 4.77a4.09 4.09 0 001.27 5.47 4.06 4.06 0 01-1.86-.51v.05a4.12 4.12 0 003.29 4.03 4.09 4.09 0 01-1.85.07 4.12 4.12 0 003.83 2.84A8.24 8.24 0 012 19.54 11.63 11.63 0 008.29 21c7.55 0 11.68-6.25 11.68-11.67v-.53A8.18 8.18 0 0022.46 6z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@LankyGuyy1" target="_blank" aria-label="YouTube">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C16 4.7 12 4.7 12 4.7h0s-4 0-6.9.3c-.4 0-1.3.1-2.1.9C2.4 6.5 2.2 8 2.2 8S2 9.7 2 11.3v1.3c0 1.6.2 3.3.2 3.3s.2 1.5.8 2.1c.8.8 1.8.8 2.3.9 1.7.2 6.8.3 6.8.3s4 0 6.9-.3c.4 0 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.6.2-3.3v-1.3c0-1.6-.2-3.3-.2-3.3zM10 14.7v-5.4l4.7 2.7-4.7 2.7z"/></svg>
+    </a>
+  </div>
+  <footer>© 2025 LankyGuyy1</footer>
+</body>
+</html>
